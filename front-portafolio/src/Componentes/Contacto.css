@@ -1,0 +1,40 @@
+.pie {
+  background: #262626;
+  box-shadow: 7px 5px 10px rgba(0, 0, 0, 0.333);
+  position: fixed; 
+  bottom: 1%; 
+  left: 0; 
+  width: 98.8%; 
+  height: 5%;
+  padding-bottom: 5%;
+  margin-top: 0;
+  margin-left: 0.6%;
+  border-radius: 10%;
+  z-index: 1000; 
+  display: flex;
+  overflow: hidden;
+  align-items: center;
+  text-align: center;
+}
+
+.social-media {
+  margin: 0 auto; 
+  display: flex;
+  padding-top: 5.5%;
+}
+
+.social-media a {
+  margin-right: 5%;
+  text-decoration: none;
+  color: inherit;
+}
+
+.social-media a:last-child {
+  margin-right: 0;
+}
+
+.social-media a svg {
+  color: #3498DB;
+  width: 15%;
+  fill: currentColor;
+}

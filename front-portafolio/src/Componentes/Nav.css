@@ -1,0 +1,81 @@
+.contenedor-barra {
+    height: 10vh;
+    max-width: auto;
+    margin: 0;
+  }
+  
+  .barra-opciones {
+    height: 100%;
+    width: 100%;
+    background-color: #101010;
+    border-radius: 10%;
+    box-shadow: 16px 14px 20px #0000008c;
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .barra-opciones::before {
+    content: "";
+    position: absolute;
+    height: 100%;
+    width: 200%;
+    background-image: conic-gradient(#3498DB 20deg, transparent 120deg);
+    animation: rotar 2s linear infinite;
+  }
+  
+  @keyframes rotar {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(-360deg);
+    }
+  }
+  
+  .barra-opciones::after {
+    content: "";
+    position: absolute;
+    height: 87%;
+    width: 200%;
+    background-color: #101010;
+    border-radius: 10%;
+    box-shadow: inset 16px 14px 20px #0000008c;
+  }
+  
+  #titulo{
+    color: #3498DB;
+    z-index: 2;
+    background-color: transparent;
+    font-family: 'Bebas Neue', sans-serif;
+    text-align: center;
+    padding-top: 1%;
+
+  }
+
+  
+  
+  @media (max-width: 768px) {
+    .contenedor-barra {
+      max-width: 100%;
+    }
+  
+    .barra-opciones {
+      height: auto;
+      flex-direction: column;
+    }
+  
+    .barra-opciones::before,
+    .barra-opciones::after {
+      width: 100%; /* Ajustar el ancho al 100% en pantallas pequeñas */
+    }
+  
+    button {
+      width: 100%;
+      max-width: none;
+    }
+  }
+  
